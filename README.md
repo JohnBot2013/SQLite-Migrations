@@ -19,4 +19,4 @@ The unit tests provide some examples of usage.
 
 In your application you need to initialise DbInitialiser with an SQLiteConnection and the assembly which contains your IMigration classes.
 
-You can then run dbInitialiser.InitialiseDatabase() to peform a completely automatic migration or you can provide DbInitialiser with an array of pre-configured and sorted IMigration objects. The unit tests illustrate both methods.
+You can then run dbInitialiser.InitialiseDatabase() to peform a completely automatic migration or you can provide DbInitialiser with an array of pre-configured and sorted IMigration objects. The unit tests illustrate how to use both methods.

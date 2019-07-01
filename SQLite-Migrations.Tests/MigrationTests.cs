@@ -18,6 +18,11 @@ namespace SQLite_Migrations.Tests
             DeleteDatabase();
         }
 
+        /// <summary>
+        /// This test uses automatic migrations. Because they have been numbered with breaks in the sequence
+        /// only Migration001 will execute.
+        /// </summary>
+        /// <returns></returns>
         [TestMethod]
         public async Task CanInitializeADatabase()
         {
@@ -35,6 +40,10 @@ namespace SQLite_Migrations.Tests
             }
         }
 
+        /// <summary>
+        /// This test uses pre-defined IMigration objects.
+        /// </summary>
+        /// <returns></returns>
         [TestMethod]
         public async Task CanSeedADatabase()
         {
@@ -53,6 +62,11 @@ namespace SQLite_Migrations.Tests
             }
         }
 
+        /// <summary>
+        /// This test uses pre-defined IMigration objects however they are/must be sequential.
+        /// In this case Migration201 and Migration 202
+        /// </summary>
+        /// <returns></returns>
         [TestMethod]
         public async Task CanModifyATable()
         {

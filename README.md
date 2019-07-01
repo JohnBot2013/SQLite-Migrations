@@ -16,3 +16,7 @@ Each Migration can provide as complex a set of changes as needed and includes se
 The utility provides a BaseMigration for you to use. This has a number of utilities which are helpful when making column of data changes.
 
 The unit tests provide some examples of usage.
+
+In your application you need to initialise DbInitialiser with an SQLiteConnection and the assembly which contains the IMigration classes.
+
+You can then run dbInitialiser.InitialiseDatabase() to peform a completely automatic migration or you can provide DbInitialiser with an array of pre-configured and sorted IMigration objects. The unit tests illustrate both methods.

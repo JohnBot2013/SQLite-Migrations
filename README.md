@@ -7,7 +7,7 @@ Any database application needs a way to maintain its schema. With Entity Framewo
 
 This utility provides a way to keep your database in line with your code base automatically, every time your application starts.
 
-Each set of changes is captured using an IMigration. Each Migration must have a 3 digit sequential number at the end of its name. When each IMigration is executed, the number becomes the current application version and is stored using a SQLite pragma.
+Each set of changes is captured using an IMigration. Each IMigration must have a 3 digit sequential number at the end of its name. When each IMigration is executed, the number becomes the current application version and is stored using a SQLite pragma.
 
 The Migration process is very efficient, Migrations are only executed if their number is higher than the current version.
 
